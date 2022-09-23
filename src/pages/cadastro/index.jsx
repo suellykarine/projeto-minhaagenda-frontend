@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import * as yup from "yup";
+import agenda from "../../assets/agenda.png";
 import api from "../../services/api";
+import { Background, Container, Content, FormDiv } from "./style";
 
 const Cadastro = () => {
   const history = useHistory();
@@ -38,30 +40,38 @@ const Cadastro = () => {
       .catch((err) => toast.error("Ops! algo deu errado"));
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmitCadstrar)}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Digite aqui seu nome"
-          {...register("name")}
-        />
-        <span className="erro">{errors.name?.message}</span>
-        <input
-          name="email"
-          placeholder="Digite aqui seu email"
-          {...register("email")}
-        />
-        <span className="erro">{errors.email?.message}</span>
-        <input
-          name="number"
-          placeholder="Digite aqui seu telefone"
-          {...register("telephone")}
-        />
-        <span className="erro">{errors.telephone?.message}</span>
-        <button type="submit">cadastrar cliente</button>
-      </form>
-    </div>
+    <Container>
+      <Background>
+        <img src={agenda} alt="agenda" />
+      </Background>
+      <Content>
+        <FormDiv>
+          <p> MINHA AGENDA</p>
+          <form onSubmit={handleSubmit(onSubmitCadstrar)}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Digite aqui seu nome"
+              {...register("name")}
+            />
+            <span className="erro">{errors.name?.message}</span>
+            <input
+              name="email"
+              placeholder="Digite aqui seu email"
+              {...register("email")}
+            />
+            <span className="erro">{errors.email?.message}</span>
+            <input
+              name="number"
+              placeholder="Digite aqui seu telefone"
+              {...register("telephone")}
+            />
+            <span className="erro">{errors.telephone?.message}</span>
+            <button type="submit">Cadastrar cliente</button>
+          </form>
+        </FormDiv>
+      </Content>
+    </Container>
   );
 };
 export default Cadastro;

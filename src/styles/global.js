@@ -13,6 +13,7 @@ export default createGlobalStyle `
     --vanilla: #f1ede0;
     --black: #0c0d0d;
     --violet: #EE82EE
+    --orange: #ffa500;
 }
 
 body{
@@ -30,7 +31,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 button{
-    cursor: pointer
+    cursor: pointer;
+    width: 100px;
+    border-radius: 5px;
+    border: solid orange 2px;
+    margin-right: 72px;
+    color: blue;
 }
 
 a{
