@@ -14,7 +14,7 @@ const Cadastro = () => {
     name: yup.string().required("Nome obrigatório"),
 
     email: yup.string().required("Email obrigatório").email("Email inválido"),
-    telephone: yup.number().required("telefone obrigátorio").min(9),
+    telephone: yup.string().required("telefone obrigátorio").min(9),
   });
 
   const {
@@ -35,7 +35,7 @@ const Cadastro = () => {
       .post("/client", user)
       .then((_) => {
         toast.success("Conta criada com sucesso ");
-        return history.push("/home");
+        return history.push("/dashboard");
       })
       .catch((err) => toast.error("Ops! algo deu errado"));
   };
