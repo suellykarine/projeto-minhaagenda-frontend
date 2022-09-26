@@ -6,6 +6,7 @@ const Card = ({ name, email, telephone, onClick }) => {
     <Container>
       <span>
         <BsFillTelephoneFill />
+        <hr />
         {name}
       </span>
       <hr />
