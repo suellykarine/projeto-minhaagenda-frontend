@@ -1,4 +1,4 @@
-# Projeto-fullstack-fronend
+# Projeto-fullstack-frontend
 - Simulação de um teste técnico com uma aplicação fullstack, feito em nodejs e reactjs
 
 ## Front-end para API minha agenda
