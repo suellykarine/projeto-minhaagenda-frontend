@@ -1,7 +1,7 @@
 <h1 align="center">Front-end para API Minha Agenda</h1>
 <p align='center'> <img src="./src/assets/titulo.png"> </p>
 
-- Simula uma agenda virtual, onde o usuário se cadastra e também cadastra e deleta seus contatos. Aplicação em Reactjs.
+- Simula uma agenda virtual, onde o usuário se cadastra como também cadastra e deleta seus contatos. Aplicação em Reactjs.
 - Link: https://projetominhaagenda.vercel.app/
 
 ## Tecnologias e ferramentas :wrench:
