@@ -1,0 +1,29 @@
+.original-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #1f104f;
+  font-weight: bold;
+  font-size: 21px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  border: 4px double #ffffff;
+  transition: 0.3s;
+  background-color: #b39ddb;
+  margin-left: 36px;
+  margin-top: 24px;
+}
+
+.original-button:hover {
+  opacity: 0.5;
+}
+
+.erro {
+  color: #1f104f;
+  font-weight: bold;
+  margin-right: 81px;
+}

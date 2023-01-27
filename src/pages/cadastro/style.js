@@ -11,6 +11,10 @@ export const Background = styled.div `
     flex: 1;
     background: no-repeat center;
     background-color: #ee82ee;
+    img {
+      margin-left: 80px;
+      margin-top: 53px;
+    }
   }
 `;
 
@@ -49,9 +53,10 @@ export const FormDiv = styled.div `
       border: 2px solid #ee82ee;
       padding: irem;
       display: flex;
-      margin-bottom: 10px;
+      margin-bottom: 2px;
       width: 250px;
-      height: 30px;
+      height: 35px;
+      margin-left: 10px;
     }
     input::placeholder {
       padding: 10px;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import dashboard from "../../assets/dashboard.png";
 import Card from "../../components/card";
 import api from "../../services/api";
 import { Container, InputContanier, TaskContact } from "./style";
@@ -36,22 +37,21 @@ const Dashboard = () => {
   return (
     <Container>
       <InputContanier onSubmit={handleSubmit(onSubmitCadstrar)}>
-        <span> MEUS CONTATOS</span>
+        <h1>
+          {" "}
+          <img src={dashboard} alt="meus contatos" />{" "}
+        </h1>
         <section>
           <input
             type="text"
             name="name"
-            placeholder="Digite  seu nome"
+            placeholder="Nome"
             {...register("name")}
           />
-          <input
-            name="email"
-            placeholder="Digite seu email"
-            {...register("email")}
-          />
+          <input name="email" placeholder="Email" {...register("email")} />
           <input
             name="number"
-            placeholder="Digite seu telefone"
+            placeholder="Telefone/Celular"
             {...register("telephone")}
           />
         </section>
@@ -70,6 +70,14 @@ const Dashboard = () => {
             }}
           />
         ))}
+        {/* {[1, 2, 3].map((_) => (
+          <Card
+            name="Suelly Araujo"
+            email="suelly@minhaagenda.com"
+            telephone="+55 (81) 12345678"
+            onClick={() => {}}
+          />
+        ))} */}
       </TaskContact>
     </Container>
   );

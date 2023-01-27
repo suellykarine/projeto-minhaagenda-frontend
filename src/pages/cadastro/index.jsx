@@ -4,8 +4,10 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import * as yup from "yup";
 import agenda from "../../assets/agenda.png";
+import titulo from "../../assets/titulo.png";
 import api from "../../services/api";
 import { Background, Container, Content, FormDiv } from "./style";
+import "./styles.css";
 
 const Cadastro = () => {
   const history = useHistory();
@@ -14,7 +16,7 @@ const Cadastro = () => {
     name: yup.string().required("Nome obrigatório"),
 
     email: yup.string().required("Email obrigatório").email("Email inválido"),
-    telephone: yup.string().required("telefone obrigátorio").min(9),
+    telephone: yup.string().required("Telefone obrigátorio").min(9),
   });
 
   const {
@@ -46,28 +48,33 @@ const Cadastro = () => {
       </Background>
       <Content>
         <FormDiv>
-          <p> MINHA AGENDA</p>
+          <p>
+            {" "}
+            <img src={titulo} alt="minha agenda" />{" "}
+          </p>
           <form onSubmit={handleSubmit(onSubmitCadstrar)}>
             <input
               type="text"
               name="name"
-              placeholder="Digite aqui seu nome"
+              placeholder="Seu nome"
               {...register("name")}
             />
             <span className="erro">{errors.name?.message}</span>
             <input
               name="email"
-              placeholder="Digite aqui seu email"
+              placeholder="Seu email"
               {...register("email")}
             />
             <span className="erro">{errors.email?.message}</span>
             <input
               name="number"
-              placeholder="Digite aqui seu telefone"
+              placeholder="Seu telefone"
               {...register("telephone")}
             />
             <span className="erro">{errors.telephone?.message}</span>
-            <button type="submit">Cadastrar cliente</button>
+            <button className="original-button" type="submit">
+              Cadastrar
+            </button>
           </form>
         </FormDiv>
       </Content>

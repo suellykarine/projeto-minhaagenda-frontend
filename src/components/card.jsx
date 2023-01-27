@@ -1,11 +1,12 @@
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { BsFillTelephoneFill, BsTrash } from "react-icons/bs";
+
 import { Container } from "./style";
 
 const Card = ({ name, email, telephone, onClick }) => {
   return (
     <Container>
+      <BsFillTelephoneFill />
       <span>
-        <BsFillTelephoneFill />
         <hr />
         {name}
       </span>
@@ -13,7 +14,11 @@ const Card = ({ name, email, telephone, onClick }) => {
       <span> {email}</span>
       <hr />
       <span> {telephone}</span>
-      <button onClick={onClick}>Apagar Contato</button>
+      <i>
+        <BsTrash size={25} onClick={onClick}>
+          Apagar
+        </BsTrash>
+      </i>
     </Container>
   );
 };
