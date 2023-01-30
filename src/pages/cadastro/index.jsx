@@ -59,19 +59,19 @@ const Cadastro = () => {
               placeholder="Seu nome"
               {...register("name")}
             />
-            <span className="erro">{errors.name?.message}</span>
+            <span className="error">{errors.name?.message}</span>
             <input
               name="email"
               placeholder="Seu email"
               {...register("email")}
             />
-            <span className="erro">{errors.email?.message}</span>
+            <span className="error">{errors.email?.message}</span>
             <input
               name="number"
               placeholder="Seu telefone"
               {...register("telephone")}
             />
-            <span className="erro">{errors.telephone?.message}</span>
+            <span className="error">{errors.telephone?.message}</span>
             <button className="original-button" type="submit">
               Cadastrar
             </button>
